@@ -1,0 +1,29 @@
+body{
+	
+	margin-left: 250px;
+	margin-right: 250px;
+	
+}
+.table_box{
+
+	padding: 5px;
+	text-align: center;
+	
+}
+.green{
+	
+	color:green;
+	font-family: Arial, Helvetica, sans-serif
+	
+}
+.table_row{
+	
+	color:blue;
+	font-family: Courier;	
+}
+.title{
+	
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	
+}

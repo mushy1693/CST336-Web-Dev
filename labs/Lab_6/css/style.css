@@ -1,0 +1,23 @@
+.article{
+	
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+	
+	text-align: center;
+	font-family: Courier;
+	font-weight: bold;
+	font-size: 30px;
+}
+body{
+	
+	background-color:pink;
+	
+}
+
+input{
+	
+	border-radius: 10px;
+	
+}

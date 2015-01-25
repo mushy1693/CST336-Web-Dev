@@ -1,0 +1,39 @@
+body{
+	
+	background-color:red;
+	
+}
+.article{
+	
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: center;
+	
+}
+input{
+	
+	border-radius: 30px;
+}
+.stadium_name{
+	
+	font-family: Courier;
+	color:white;
+	
+}
+.top_5{
+	
+	font-family: Courier;
+	color:white;
+	
+}
+.all_team_and_stadium{
+	
+	font-family: Courier;
+	color:white;
+	
+}
+h3{
+	
+	font-size: 35px;
+	font-family: Courier;
+}

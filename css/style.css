@@ -1,0 +1,75 @@
+body{
+	
+	background-image: url('../img/background_image.jpg');
+	
+}
+.container{
+	
+	margin-left: 150px;
+	margin-right: 150px;
+	
+}
+.title{
+	
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 24px;
+	background: linear-gradient(to bottom, rgba(213,206,166,1) 0%,rgba(201,193,144,1) 40%,rgba(183,173,112,1) 100%);
+	border-radius: 25px;
+	margin-bottom: 10px;
+	font-family: Baskerville Old Face;
+}
+.nav{
+	
+	background-color: green;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	background: linear-gradient(to bottom, rgba(213,206,166,1) 0%,rgba(201,193,144,1) 40%,rgba(183,173,112,1) 100%);
+	border-radius: 25px;
+	margin-bottom: 10px;
+	
+}
+.nav_bullet{
+
+	list-style-type: none;
+	display: inline;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: 20px;
+	font-size:25px;
+	font-weight:bold;
+	background: linear-gradient(to bottom, rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%);
+	
+	
+}
+.nav_bullet:hover{
+
+	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+	
+}
+.article{
+	
+	padding-left:50px;
+	padding-right:50px;	
+	padding-top:20px;
+	padding-bottom:80px;
+	
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 10px;
+	font-family: Book Antiqua;
+	
+	background: linear-gradient(to bottom, rgba(213,206,166,1) 0%,rgba(201,193,144,1) 40%,rgba(183,173,112,1) 100%);
+	border-radius: 25px;
+	
+}
+.self_portrait{
+
+	float:right;
+	border: 3px solid black;
+	border-radius: 14px;
+	margin-left: 10px;
+	
+
+}

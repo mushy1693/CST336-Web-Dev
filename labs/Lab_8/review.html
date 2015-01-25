@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Nelson Lee | Lab 8</title>
+		
+	</head>
+	
+	<body>
+		
+		<div>
+			
+			<strong id = "greeting">Hello World!</strong><br>
+			<img id = "animal" src="img/cat.png">
+			
+		</div>
+		
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		
+		<script>
+		
+			$(document).ready(function(){
+				
+				$("#greeting").click(function(){
+					
+					$("#animal").attr("src", "img/dog.png");
+					
+				});
+				
+			});
+			
+		</script>
+		
+	</body>
+	
+</html>

@@ -1,0 +1,231 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Nelson | Lab 8</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="description" content="">
+  <meta name="author" content="lara4594">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <style>
+      
+      img {
+         width: 100px;
+         cursor: pointer;    
+      }
+      
+  </style>
+</head>
+
+<body>
+  <div class = "article">
+      
+      <h2> Vocabulary Quiz </h2>
+      
+      <div id="q1">
+          <h3>1. Click on "El Pollo"</h3>
+          <img id="cat" src="img/cat.png" />
+          <img id="chicken" src="img/chicken.png" />
+          <img id="dog" src="img/dog.png" />
+          <img id="mouse" src="img/mouse.png" />
+      </div>
+      
+      <h3>2. What is "cat" in Spanish</h3>
+      <input type="text" id="q2"> <br />
+      <div id="feedback2"></div>
+      
+      <br />
+      
+      <h3> 3. What is "dog" in Spanish</h3>
+      
+    <input type="radio" name="q3" value="cat"> Gato <br />
+    <input type="radio" name="q3" value="mouse"> Raton <br />
+    <input type="radio" name="q3" value="dog"> Perro <br />
+    <input type="radio" name="q3" value="chicken"> Chicken <br />
+    <div id="feedback3"></div>
+      
+      <br /><br />
+    
+    <div id="q4">
+          <h3>1. Click on the Dinosaur</h3>
+          <img id="cat1" src="img/cat.png" />
+          <img id="chicken1" src="img/chicken.png" />
+          <img id="dog1" src="img/dog.png" />
+          <img id="mouse1" src="img/mouse.png" />
+          <img id="dinosaur" src="http://www.dinoleaks.com/wp-content/uploads/2013/11/1238701832427205189StudioFibonacci_Cartoon_triceratops.svg_.hi_.png" />
+    </div>
+    
+    <h3> 3. What is the dinosaur's name?</h3>
+      
+    <input type="radio" name="q5" value="chen"> chen<br />
+    <input type="radio" name="q5" value="ben"> ben <br />
+    <input type="radio" name="q5" value="archie"> archie <br />
+    <input type="radio" name="q5" value="tobie"> tobie <br />
+    <div id="feedback4"></div>
+      
+    <input type="button" value="Grade Quiz!" id="gradeQuiz" />
+    
+    <h2 id="grade"></h2>
+    
+    <h2 id="output"></h2>
+      
+  </div>
+  
+  
+  <script>
+      
+        var answer1;
+        
+        $("#q1 img").mouseenter( function(){
+            
+                $(this).css("width","125px");
+            
+        } );
+        
+
+        $("#q1 img").mouseleave( function(){
+            
+                $(this).css("width","100px");
+            
+        } );
+        
+        $("#q1 img").click( function(){
+            
+               //alert( $(this).attr("id")  );
+            
+               answer1 = $(this).attr("id")
+               $("#q1 img").css("border", "");
+               $(this).css("border","5px dashed gray")
+            
+        });
+        
+        $("#q4 img").mouseenter( function(){
+            
+                $(this).css("width","125px");
+            
+        } );
+        
+
+        $("#q4 img").mouseleave( function(){
+            
+                $(this).css("width","100px");
+            
+        } );
+        
+        $("#q4 img").click( function(){
+            
+               //alert( $(this).attr("id")  );
+            
+               answer4 = $(this).attr("id")
+               $("#q4 img").css("border", "");
+               $(this).css("border","5px dashed gray")
+            
+        });
+        
+        
+        $("#gradeQuiz").click( function(){
+            
+            //  alert("hi");
+            
+            var grade = 0;
+            
+            if (answer1 == "chicken") {
+                
+                grade += 20;
+                
+            } else {
+                
+                $("#chicken").css("border","3px solid green");
+            }
+            
+            if (answer4 == "dinosaur") {
+                
+                grade += 20;
+                
+            } else {
+                
+                $("#dinosaur").css("border","3px solid green");
+            }
+            
+            
+            var answer2 = $("#q2").val().toUpperCase();
+            
+            if (answer2 == "GATO") {
+                
+                grade += 20;   //the same as grade = grade + 20;
+                
+            } else {
+
+            $("#feedback2").html("The correct answer is GATO!");                
+                
+            }
+            
+            var answer3 = $("input:radio[name='q3']:checked").val();
+            
+            if (answer3 == "dog") {
+                
+                grade += 20;
+                
+            } else {
+                
+                 $("#feedback3").html("The correct answer is PERRO!");
+                
+            }
+            
+           	var answer5 = $("input:radio[name='q5']:checked").val();
+            
+            if (answer5 == "archie") {
+                
+                grade += 20;
+                
+            } else {
+                
+                 $("#feedback4").html("The correct answer is ARCHIE!");
+                
+            }
+            
+            $("#grade").html("Grade: " + grade);
+            
+            var output;
+            
+            if (grade == 100) {
+                
+                output = "Good";
+                
+            }else if(grade == 80){
+            	
+            	output = "Okay";
+            	
+            }else if(grade == 60){
+            	
+            	output = "Not Good";
+            	
+            }else if(grade == 40){
+            	
+            	output = "Terrible";
+            	
+            }else {
+                
+                 output = "Fail";
+                
+            }
+            
+            $("#output").html("Grade: " + output);
+            
+        });
+        
+        
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+	
+	background-color: #666699;
+	
+}
+.article{
+	
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	background-color: #996666;
+	padding: 20px;
+	text-align: center;
+	border: 3px black solid;
+	border-radius: 10px;
+	font-family: Courier;
+	
+}
+
+.title{
+	
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	background-color: #996666;
+	padding: 20px;
+	text-align: center;
+	border: 3px black solid;
+	border-radius: 10px;
+	font-family: Courier;
+	
+}

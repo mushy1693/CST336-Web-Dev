@@ -1,0 +1,50 @@
+#main_page{
+	
+	margin-left: 270px;
+	margin-right: 270px;
+
+}
+.bold{
+
+	font-weight: bold;
+
+}
+.italicize{
+
+	font-style: italic;
+
+}
+.picture{
+
+	width: 280px;
+	height: 220px;
+	float: right;
+	border:7px solid black;
+	border-radius: 10px;
+	margin-left: 10px;
+
+}
+.ul{
+
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+
+}
+.li{
+
+	display: inline;
+	padding-right: 35px;
+
+}
+.title{
+
+	text-align: center;
+
+}
+#main_page_nav{
+
+	color: #006600;
+	font-weight: bold;
+
+}

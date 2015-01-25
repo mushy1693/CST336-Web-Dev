@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		
+	  <meta charset="utf-8">
+	  <title>Nelson | Final Project</title>
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  
+	</head>
+
+	<body>
+		
+		<div class = "nav">
+		
+			<ul>
+				
+				<li><a href="register.html">Register</a></li>
+				<li><a href="login.html">Login</a></li>
+				
+			</ul>
+		
+		</div>
+		
+	  <div class = "article">
+	
+		<h1>Contact Finder</h1>
+		
+		<form onsubmit="return false">
+			
+			Email: <input type="email" name = "email" ><br>
+			
+			<br>
+			
+			<button id = "search">Search</button>
+			
+		</form>
+		
+		<br>
+		
+		<span>
+			
+		</span>
+		
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		
+		<script>
+			
+			$("#search").click(function(){
+				
+				$.ajax({
+					
+					type : "get",
+					
+					url : "search.php",
+					
+					dataType : "json",
+					
+					data : {"email" : $("input[name='email']").val()},
+							
+					success : function(data,status){
+				
+						var person_info = "";
+						
+						if(data['person'][0] != ""){
+						
+							var person_data = ["<b>First Name: </b>", "<b>Last Name: </b>", "<b>Age: </b>", "<b>Sex: </b>", "<b>Address: </b>", "<b>City: </b>", "<b>State: </b>", "<b>Zip: </b>", "<b>Earning: </b>$", "<b>Saving: </b>$", "<b>Expense: </b>$", "<b>Email: </b>"];
+							
+							person_info += "<center><table>";
+							
+							//put the data into the variable person_info
+							for (var i=0; i< data['person'].length; i++){
+								
+								person_info += "<tr><td>" + person_data[i] + data["person"][i] + "</tr></td>";
+								
+							}
+							
+							person_info += "</table></center>";
+							
+							$("span").html(person_info);
+							$("input").val("");
+						
+						}else{
+							
+							person_info = "Person does not exist.";
+							$("span").html(person_info);
+							$("input").val("");
+							
+						}
+
+					}
+					
+				});
+				
+			});
+			
+		</script>
+		
+	  </div>
+	  
+	</body>
+
+</html>

@@ -1,0 +1,40 @@
+.odd{
+	
+	color: #CC0000;
+	  		
+}
+.even{
+	  		
+	color: #33CC33;
+	  		
+}
+.body{
+	
+	margin-left: 150px;
+	margin-right: 150px;
+	  		
+}
+.title{
+	
+	text-align: center;
+	font-family: Courier;
+	 
+}
+.data{
+	
+	text-align: center;
+	  		
+}
+table{
+	
+	margin: 0 auto;
+	margin-top: 30px;
+	border-radius: 5px;
+	  		
+}
+td{
+	
+	padding: 10px;
+	border-radius: 5px;
+	  		
+}

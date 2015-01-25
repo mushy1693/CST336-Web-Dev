@@ -1,0 +1,38 @@
+body{
+	
+	margin-left:100px;
+	margin-right:100px;
+	
+}
+#converter{
+	
+	text-align:center;
+	margin: 100px;
+	border-radius: 10px;
+	border: 3px solid black;
+	padding: 30px;
+	background-color:#CC9966;
+}
+#title{
+	
+	text-align:center;
+	font-size:30px;
+	font-family: Courier;
+	font-weight: bold;
+	
+}
+.button{
+	
+	border-radius: 15px;
+	
+}
+.button:hover{
+	
+	font-weight: bold;
+	
+}
+.text_box{
+	
+	border-radius: 5px;
+	
+}
